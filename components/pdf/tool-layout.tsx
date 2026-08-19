@@ -4,6 +4,7 @@ import { ArrowLeft, Type as type, LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { getToolSeoContent, ToolSeoContent as ToolSeoGuide } from '@/lib/seo/tool-content';
 
 interface ToolLayoutProps {
   title: string;
@@ -41,7 +42,10 @@ export function ToolLayout({ title, description, icon: Icon, color, children }: 
         </div>
         
         <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-          {children}
+          <div className="space-y-16">
+            <div>{children}</div>
+            <ToolSeoGuide data={getToolSeoContent(title, description)} />
+          </div>
         </div>
       </main>
       
