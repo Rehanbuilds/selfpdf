@@ -7,9 +7,54 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+const siteUrl = 'https://selfpdf.com'
+
 export const metadata: Metadata = {
-  title: 'SelfPDF',
-  description: 'Simple, private PDF tools that run directly in your browser.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Free PDF Tools Online | Merge, Compress, Convert & Edit PDFs | SelfPDF',
+    template: '%s | SelfPDF',
+  },
+  description:
+    'Free online PDF tools to merge, split, compress, convert, edit, sign, protect, and organize PDF files directly in your browser.',
+  applicationName: 'SelfPDF',
+  creator: 'SelfPDF',
+  publisher: 'SelfPDF',
+  category: 'Productivity',
+  keywords: [
+    'free PDF tools',
+    'online PDF tools',
+    'merge PDF',
+    'compress PDF',
+    'convert PDF',
+    'split PDF',
+    'edit PDF online',
+    'PDF converter',
+    'PDF editor',
+    'sign PDF',
+    'protect PDF',
+  ],
+  alternates: { canonical: siteUrl },
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    siteName: 'SelfPDF',
+    title: 'Free PDF Tools Online | SelfPDF',
+    description: 'Merge, compress, convert, edit, sign, and organize PDFs online with SelfPDF.',
+    images: [{ url: '/selfpdf-logo.png', width: 1200, height: 630, alt: 'SelfPDF free PDF tools' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free PDF Tools Online | SelfPDF',
+    description: 'Free online PDF tools for merging, compressing, converting, editing, and signing PDFs.',
+    images: ['/selfpdf-logo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
+  verification: { google: 'tHukVrfQBbJqiGXL8knlQaiqL-rBQkPlpADl0PlKrX0' },
   icons: {
     icon: '/favicon.png',
     apple: '/apple-icon.png',
