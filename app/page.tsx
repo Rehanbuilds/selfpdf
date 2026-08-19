@@ -9,9 +9,31 @@ import { AnimatedHero } from '@/components/animated-hero';
 import { pdfTools, toolCategories } from '@/lib/config/tools';
 import { HeroBackground } from '@/components/hero-background';
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebApplication',
+      name: 'SelfPDF',
+      url: 'https://selfpdf.com',
+      applicationCategory: 'ProductivityApplication',
+      operatingSystem: 'Any',
+      description: 'Free online PDF tools to merge, split, compress, convert, edit, sign, and organize PDF files.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'Organization',
+      name: 'SelfPDF',
+      url: 'https://selfpdf.com',
+      logo: 'https://selfpdf.com/selfpdf-logo.png',
+    },
+  ],
+}
+
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Header />
       
       <main className="flex-1">
