@@ -7,6 +7,5 @@ export default function robots(): MetadataRoute.Robots {
       'https://www.selfpdf.xyz/sitemap.xml',
       'https://www.selfpdf.xyz/sitemap-tools.xml',
     ],
-    host: 'https://www.selfpdf.xyz',
   }
 }
