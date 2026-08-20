@@ -85,7 +85,7 @@ export default function TermsPage() {
 
               {/* Main content */}
               <div className="flex-1 min-w-0">
-                <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-28 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-semibold prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
+                <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
 
                   <h2 id="acceptance">1. Acceptance of Terms</h2>
                   <p>

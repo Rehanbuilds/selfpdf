@@ -9,6 +9,33 @@ import { AnimatedHero } from '@/components/animated-hero';
 import { pdfTools, toolCategories } from '@/lib/config/tools';
 import { HeroBackground } from '@/components/hero-background';
 
+const faqItems = [
+  {
+    question: 'What is the best free PDF tool online?',
+    answer: 'SelfPDF is a free online PDF toolkit for merging, splitting, compressing, converting, editing, signing, and organizing PDF files. It works directly in your browser with no account or subscription required.',
+  },
+  {
+    question: 'Are my PDF files uploaded to SelfPDF?',
+    answer: 'No. SelfPDF processes files locally in your browser, so your PDFs stay on your device instead of being uploaded to a third-party server.',
+  },
+  {
+    question: 'Can I merge PDF files for free?',
+    answer: 'Yes. You can combine multiple PDF files into one document for free using the SelfPDF Merge PDF tool, without registration, watermarks, or a credit card.',
+  },
+  {
+    question: 'How do I compress a PDF without losing quality?',
+    answer: 'Open the Compress PDF tool, select your file, choose the available compression settings, and download the optimized document. Local processing keeps the workflow fast and private.',
+  },
+  {
+    question: 'Does SelfPDF work on phones and computers?',
+    answer: 'Yes. SelfPDF works in modern browsers on phones, tablets, Windows, Mac, Linux, and Chromebooks. No software installation is needed.',
+  },
+  {
+    question: 'What PDF tools does SelfPDF include?',
+    answer: 'SelfPDF includes tools to merge, split, compress, convert, rotate, crop, watermark, number, sign, protect, unlock, repair, scan, and extract content from PDF files.',
+  },
+];
+
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -26,6 +53,14 @@ const structuredData = {
       name: 'SelfPDF',
       url: 'https://www.selfpdf.xyz',
       logo: 'https://www.selfpdf.xyz/selfpdf-logo.png',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(({ question, answer }) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
     },
   ],
 }
@@ -308,6 +343,34 @@ export default function HomePage() {
           </div>
         </section>
 
+
+        {/* FAQ Section */}
+        <section className="border-y bg-muted/30 py-16 md:py-24" aria-labelledby="faq-heading">
+          <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <h2 id="faq-heading" className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+                Frequently Asked Questions About PDF Tools
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Get clear answers about free online PDF editing, file privacy, compression, conversion, and SelfPDF&apos;s browser-based tools.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              {faqItems.map(({ question, answer }) => (
+                <details key={question} className="group rounded-xl border bg-background px-6 py-5 shadow-sm">
+                  <summary className="cursor-pointer list-none pr-8 text-base font-bold marker:hidden [&::-webkit-details-marker]:hidden">
+                    <span className="flex items-center justify-between gap-4">
+                      {question}
+                      <span aria-hidden="true" className="text-xl font-normal text-muted-foreground transition-transform group-open:rotate-45">+</span>
+                    </span>
+                  </summary>
+                  <p className="pt-4 leading-relaxed text-muted-foreground">{answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-16 md:py-24">
