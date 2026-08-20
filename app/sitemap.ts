@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const siteUrl = 'https://selfpdf.com'
+const siteUrl = 'https://www.selfpdf.xyz'
 const lastModified = new Date('2026-08-20T00:00:00.000Z')
 
 export default function sitemap(): MetadataRoute.Sitemap {

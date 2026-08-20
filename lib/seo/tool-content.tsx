@@ -38,4 +38,4 @@ export function ToolSeoContent({ data }: { data: ToolSeoContent }) {
   </section>;
 }
 
-export function getToolMetadata(title: string, description: string, path: string) { const data = getToolSeoContent(title, description); return { title: data.metaTitle, description: data.metaDescription, alternates: { canonical: `https://selfpdf.com${path}` }, openGraph: { title: data.metaTitle, description: data.metaDescription, url: `https://selfpdf.com${path}`, type: 'website' as const, siteName: 'SelfPDF' }, twitter: { card: 'summary' as const, title: data.metaTitle, description: data.metaDescription } }; }
+export function getToolMetadata(title: string, description: string, path: string) { const data = getToolSeoContent(title, description); return { title: data.metaTitle, description: data.metaDescription, alternates: { canonical: `https://www.selfpdf.xyz${path}` }, openGraph: { title: data.metaTitle, description: data.metaDescription, url: `https://www.selfpdf.xyz${path}`, type: 'website' as const, siteName: 'SelfPDF' }, twitter: { card: 'summary' as const, title: data.metaTitle, description: data.metaDescription } }; }

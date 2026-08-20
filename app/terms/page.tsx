@@ -89,7 +89,7 @@ export default function TermsPage() {
 
                   <h2 id="acceptance">1. Acceptance of Terms</h2>
                   <p>
-                    By accessing or using SelfPDF (available at <a href="https://selfpdf.com" className="text-primary no-underline hover:underline">selfpdf.com</a> and
+                    By accessing or using SelfPDF (available at <a href="https://www.selfpdf.xyz" className="text-primary no-underline hover:underline">www.selfpdf.xyz</a> and
                     its subdomains), you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of
                     these terms, you must discontinue use of the service immediately.
                   </p>

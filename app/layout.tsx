@@ -7,7 +7,7 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-const siteUrl = 'https://selfpdf.com'
+const siteUrl = 'https://www.selfpdf.xyz'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

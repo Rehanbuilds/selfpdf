@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const siteUrl = 'https://selfpdf.com'
+const siteUrl = 'https://www.selfpdf.xyz'
 const lastModified = '2026-08-20T00:00:00.000Z'
 const toolRoutes = [
   'compress', 'crop', 'excel-to-pdf', 'html-to-pdf', 'images-to-pdf', 'merge', 'ocr',

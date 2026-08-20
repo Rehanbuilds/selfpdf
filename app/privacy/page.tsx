@@ -98,8 +98,8 @@ export default function PrivacyPage() {
               <p>
                 SelfPDF (<strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>) is a free, open-source web application that provides PDF
                 processing tools. SelfPDF is available at{' '}
-                <a href="https://selfpdf.com" className="text-primary no-underline hover:underline">
-                  selfpdf.com
+                <a href="https://www.selfpdf.xyz" className="text-primary no-underline hover:underline">
+                  www.selfpdf.xyz
                 </a>
                 . The project is maintained by its contributors and released under the MIT open-source license.
               </p>
