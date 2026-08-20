@@ -15,7 +15,7 @@ const structuredData = {
     {
       '@type': 'WebApplication',
       name: 'SelfPDF',
-      url: 'https://selfpdf.com',
+      url: 'https://www.selfpdf.xyz',
       applicationCategory: 'ProductivityApplication',
       operatingSystem: 'Any',
       description: 'Free online PDF tools to merge, split, compress, convert, edit, sign, and organize PDF files.',
@@ -24,8 +24,8 @@ const structuredData = {
     {
       '@type': 'Organization',
       name: 'SelfPDF',
-      url: 'https://selfpdf.com',
-      logo: 'https://selfpdf.com/selfpdf-logo.png',
+      url: 'https://www.selfpdf.xyz',
+      logo: 'https://www.selfpdf.xyz/selfpdf-logo.png',
     },
   ],
 }
