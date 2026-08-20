@@ -92,7 +92,7 @@ export default function PrivacyPage() {
         {/* ─── Full Policy ──────────────────────────────────────── */}
         <section className="border-t pb-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-16">
-            <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-24 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-semibold prose-p:text-muted-foreground prose-li:text-muted-foreground">
+            <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-24 prose-headings:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-p:text-muted-foreground prose-li:text-muted-foreground">
 
               <h2>1. Who We Are</h2>
               <p>
