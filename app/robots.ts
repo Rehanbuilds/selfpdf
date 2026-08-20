@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: [
       'https://www.selfpdf.xyz/sitemap.xml',
       'https://www.selfpdf.xyz/sitemap-tools.xml',
+      'https://www.selfpdf.xyz/sitemap-blogs.xml',
     ],
   }
 }
