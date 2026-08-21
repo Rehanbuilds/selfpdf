@@ -93,6 +93,16 @@ export function Footer() {
                   Terms of Service
                 </Link>
               </li>
+              <li>
+                <Link href="/llms.txt" className="text-muted-foreground transition-colors hover:text-foreground">
+                  llms.txt
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai.txt" className="text-muted-foreground transition-colors hover:text-foreground">
+                  ai.txt
+                </Link>
+              </li>
             </ul>
           </div>
           
