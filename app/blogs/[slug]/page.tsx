@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const blog = getBlog(slug)
   if (!blog) return {}
   return {
-    title: blog.title,
+    title: blog.metaTitle,
     description: blog.description,
     keywords: blog.keywords,
     alternates: { canonical: `https://www.selfpdf.xyz/blogs/${blog.slug}` },

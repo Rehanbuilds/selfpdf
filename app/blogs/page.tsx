@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { BlogCard } from '@/components/blog/blog-layout'
-import { blogs } from '@/lib/blog/content'
+import { getBlogsNewestFirst } from '@/lib/blog/content'
 
 export const metadata: Metadata = {
   title: 'PDF Tips, Guides, and Workflows',
@@ -20,7 +20,7 @@ export default function BlogsPage() {
       </section>
       <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 sm:py-20">
         <div className="grid gap-6 md:grid-cols-2">
-          {blogs.map((blog) => <BlogCard key={blog.slug} blog={blog} />)}
+          {getBlogsNewestFirst().map((blog) => <BlogCard key={blog.slug} blog={blog} />)}
         </div>
       </section>
     </div>
