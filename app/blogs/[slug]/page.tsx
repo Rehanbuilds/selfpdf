@@ -27,5 +27,5 @@ export default async function BlogArticlePage({ params }: PageProps) {
   const { slug } = await params
   const blog = getBlog(slug)
   if (!blog) notFound()
-  return <main className="min-h-screen bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8"><BlogJsonLd blog={blog} /><BlogArticleView blog={blog} /></main>
+  return <div className="bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8"><BlogJsonLd blog={blog} /><BlogArticleView blog={blog} /></div>
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function BlogsPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <div className="bg-background">
       <section className="border-b bg-muted/30 py-20 sm:py-28">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">SelfPDF Journal</p>
@@ -23,6 +23,6 @@ export default function BlogsPage() {
           {blogs.map((blog) => <BlogCard key={blog.slug} blog={blog} />)}
         </div>
       </section>
-    </main>
+    </div>
   )
 }
