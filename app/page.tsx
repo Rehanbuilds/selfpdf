@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Shield, Zap, Lock, Github, Check } from 'lucide-react';
@@ -8,6 +9,23 @@ import { Footer } from '@/components/footer';
 import { AnimatedHero } from '@/components/animated-hero';
 import { pdfTools, toolCategories } from '@/lib/config/tools';
 import { HeroBackground } from '@/components/hero-background';
+
+export const metadata: Metadata = {
+  title: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
+  description: 'Use fast, private PDF tools online to merge, compress, split, convert, edit, sign, and protect files in your browser. Free, secure, and no upload required.',
+  alternates: { canonical: 'https://www.selfpdf.xyz/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.selfpdf.xyz/',
+    title: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
+    description: 'Fast, private PDF tools to merge, compress, split, convert, edit, sign, and protect PDF files online.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free PDF Tools Online — SelfPDF',
+    description: 'Free, private PDF tools for merging, compressing, converting, editing, and signing files online.',
+  },
+};
 
 const faqItems = [
   {

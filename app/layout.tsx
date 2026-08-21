@@ -12,11 +12,11 @@ const siteUrl = 'https://www.selfpdf.xyz'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Free PDF Tools Online | Merge, Compress, Convert & Edit PDFs | SelfPDF',
+    default: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
     template: '%s | SelfPDF',
   },
   description:
-    'Free online PDF tools to merge, split, compress, convert, edit, sign, protect, and organize PDF files directly in your browser.',
+    'Use fast, private PDF tools online to merge, compress, split, convert, edit, sign, and protect files in your browser. Free, secure, and no upload required.',
   applicationName: 'SelfPDF',
   creator: 'SelfPDF',
   publisher: 'SelfPDF',
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'SelfPDF',
-    title: 'Free PDF Tools Online | SelfPDF',
-    description: 'Merge, compress, convert, edit, sign, and organize PDFs online with SelfPDF.',
+    title: 'Free PDF Tools Online — SelfPDF',
+    description: 'Fast, private PDF tools to merge, compress, split, convert, edit, sign, and protect PDF files online.',
     images: [{ url: '/selfpdf-logo.png', width: 1200, height: 630, alt: 'SelfPDF free PDF tools' }],
   },
   twitter: {
