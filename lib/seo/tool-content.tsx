@@ -41,8 +41,17 @@ const profiles: Record<string, ToolProfile> = {
   'Scan PDF': { keywords: ['scan to PDF', 'images to scanned PDF', 'create PDF from scans'], intro: 'Combine scanned images into a clean PDF document for records, forms, receipts, and paper-to-digital workflows.', howTo: ['Select the scanned image files.', 'Arrange pages in reading order and review the preview.', 'Create the PDF and download the scanned document.'], details: 'A good scan starts with sharp, upright images and even lighting. The result is a visual PDF; use OCR when you need selectable or searchable text.', useCases: ['Digitize paper receipts', 'Create a scanned application packet', 'Archive photographed documents'], faqs: [{ question: 'Can I make a searchable scanned PDF?', answer: 'The scan creates a PDF from images. Use the OCR tool afterward when text recognition is needed.' }, { question: 'Can I reorder scan pages?', answer: 'Yes. Arrange the selected images before creating the PDF.' }, { question: 'What image quality is best?', answer: 'Use clear, upright images with enough resolution to read small text.' }], related: [{ href: '/tools/ocr', label: 'OCR the scanned PDF' }, { href: '/tools/images-to-pdf', label: 'create a PDF from images' }] },
 };
 
+const profileAliases: Record<string, string> = {
+  'Add Page Numbers': 'Page Numbers',
+  'Add Watermark': 'Watermark',
+  'Add Page Numbers to PDF': 'Page Numbers',
+  'OCR PDF': 'OCR Scanner',
+  'Scan to PDF': 'Scan PDF',
+  'Watermark PDF': 'Watermark',
+};
+
 function buildContent(title: string, description: string): ToolSeoContent {
-  const profile = profiles[title];
+  const profile = profiles[title] ?? profiles[profileAliases[title]];
   if (!profile) {
     throw new Error(`Missing SEO profile for tool: ${title}`);
   }
