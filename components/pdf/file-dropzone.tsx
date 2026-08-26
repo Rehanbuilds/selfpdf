@@ -5,6 +5,7 @@ import React from "react"
 import { useCallback } from 'react';
 import { Upload } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { trackPdfEvent } from '@/lib/analytics';
 
 interface FileDropzoneProps {
   onFilesSelected: (files: File[]) => void;
@@ -37,6 +38,10 @@ export function FileDropzone({
       });
 
       if (droppedFiles.length > 0) {
+        trackPdfEvent('pdf_upload_started', {
+          fileType: droppedFiles[0]?.type || 'application/pdf',
+          fileCount: droppedFiles.length,
+        })
         onFilesSelected(droppedFiles);
       }
     },
@@ -51,7 +56,12 @@ export function FileDropzone({
   const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
-      onFilesSelected(Array.from(files));
+      const selectedFiles = Array.from(files)
+      trackPdfEvent('pdf_upload_started', {
+        fileType: selectedFiles[0]?.type || 'application/pdf',
+        fileCount: selectedFiles.length,
+      })
+      onFilesSelected(selectedFiles);
     }
   };
 
