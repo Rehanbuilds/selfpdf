@@ -101,6 +101,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: 1.1.6
         version: 1.1.6(@types/react-dom@19.2.3(@types/react@19.2.9))(@types/react@19.2.9)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@vemetric/web':
+        specifier: ^0.6.1
+        version: 0.6.1
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.23(postcss@8.5.6)
@@ -1397,6 +1400,9 @@ packages:
 
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
+  '@vemetric/web@0.6.1':
+    resolution: {integrity: sha512-AZ/hIhMcDGvr1zV7uTJaRoZgXzfKXKhDrdIXFsojhKMguziItGWvIT4+LbZzV2lt7ZrVjnY6nxHmyyD/D5Xm2w==}
 
   '@xmldom/xmldom@0.8.13':
     resolution: {integrity: sha512-KRYzxepc14G/CEpEGc3Yn+JKaAeT63smlDr+vjB8jRfgTBBI9wRj/nkQEO+ucV8p8I9bfKLWp37uHgFrbntPvw==}
@@ -3288,6 +3294,8 @@ snapshots:
 
   '@types/trusted-types@2.0.7':
     optional: true
+
+  '@vemetric/web@0.6.1': {}
 
   '@xmldom/xmldom@0.8.13': {}
 
