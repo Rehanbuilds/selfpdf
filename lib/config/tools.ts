@@ -6,7 +6,8 @@ export interface PDFTool {
   description: string;
   icon: LucideIcon;
   href: string;
-  category: 'organize' | 'convert' | 'edit' | 'security';
+  category: 'organize' | 'convert' | 'edit' | 'security' | 'intelligence';
+  isNew?: boolean;
   color: string;
 }
 
@@ -201,6 +202,16 @@ export const pdfTools: PDFTool[] = [
     color: 'bg-yellow-50 text-yellow-600 dark:bg-yellow-950 dark:text-yellow-400',
   },
   {
+    id: 'pdf-to-markdown',
+    name: 'PDF to Markdown',
+    description: 'Convert PDF text into editable Markdown',
+    icon: Code,
+    href: '/tools/pdf-to-markdown',
+    category: 'intelligence',
+    color: 'bg-violet-50 text-violet-600 dark:bg-violet-950 dark:text-violet-400',
+    isNew: true,
+  },
+  {
     id: 'scan',
     name: 'Scan PDF',
     description: 'Scan images into a PDF document',
@@ -216,4 +227,5 @@ export const toolCategories = [
   { id: 'convert', name: 'Convert', description: 'Convert PDFs to other formats' },
   { id: 'edit', name: 'Edit', description: 'Edit and modify your PDFs' },
   { id: 'security', name: 'Security', description: 'Protect and secure your PDFs' },
+  { id: 'intelligence', name: 'PDF Intelligence', description: 'Extract and prepare PDF content for AI workflows' },
 ] as const;

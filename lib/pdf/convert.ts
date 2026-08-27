@@ -88,7 +88,7 @@ export function downloadZip(blobs: Blob[], filenames: string[], zipName: string)
   });
 }
 
-export async function extractTextFromPDF(file: File): Promise<string[]> {
+export async function extractTextFromPDF(file: File, onProgress?: (progress: number) => void): Promise<string[]> {
   const pdfjsLib = await import('pdfjs-dist');
   if (typeof window !== 'undefined') {
     pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version || '5.4.530'}/build/pdf.worker.min.mjs`;
@@ -114,6 +114,7 @@ export async function extractTextFromPDF(file: File): Promise<string[]> {
     }
     
     pagesText.push(pageText);
+    onProgress?.(i / pdf.numPages);
   }
   return pagesText;
 }

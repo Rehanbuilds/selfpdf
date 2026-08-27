@@ -6,7 +6,7 @@ const toolRoutes = [
   'compress', 'crop', 'excel-to-pdf', 'html-to-pdf', 'images-to-pdf', 'merge', 'ocr',
   'page-numbers', 'pdf-to-excel', 'pdf-to-images', 'pdf-to-powerpoint', 'pdf-to-word',
   'powerpoint-to-pdf', 'protect', 'repair', 'rotate', 'scan', 'sign', 'split', 'unlock',
-  'watermark', 'word-to-pdf',
+  'watermark', 'word-to-pdf', 'pdf-to-markdown',
 ]
 
 export function GET() {
