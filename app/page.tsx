@@ -140,8 +140,13 @@ export default function HomePage() {
               {[...pdfTools.filter((tool) => tool.id !== 'pdf-to-markdown').slice(0, 7), pdfTools.find((tool) => tool.id === 'pdf-to-markdown')!].map((tool) => {
                 const Icon = tool.icon;
                 return (
-                  <Card key={tool.id} className="group transition-all hover:shadow-lg">
+                  <Card key={tool.id} className="group relative transition-all hover:shadow-lg">
                     <CardContent className="p-6">
+                      {tool.isNew && (
+                        <Badge className="absolute right-4 top-4 border-primary/20 bg-primary/10 text-primary hover:bg-primary/15">
+                          New!
+                        </Badge>
+                      )}
                       <Link href={tool.href} className="flex flex-col gap-3">
                         <div className={`inline-flex size-12 items-center justify-center rounded-xl ${tool.color}`}>
                           <Icon className="size-6" />

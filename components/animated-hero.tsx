@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileText, FolderKanban, RotateCw, Edit3, Shield } from 'lucide-react';
+import { FileText, FolderKanban, RotateCw, Edit3, Shield, BrainCircuit } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const categoryNodes = [
@@ -9,6 +9,7 @@ const categoryNodes = [
   { id: 'convert', icon: RotateCw, label: 'Convert', color: 'bg-green-500/20 text-green-600' },
   { id: 'edit', icon: Edit3, label: 'Edit', color: 'bg-orange-500/20 text-orange-600' },
   { id: 'security', icon: Shield, label: 'Security', color: 'bg-purple-500/20 text-purple-600' },
+  { id: 'intelligence', icon: BrainCircuit, label: 'PDF Intelligence', color: 'bg-primary/15 text-primary' },
 ];
 
 const ORBIT_RADIUS_MOBILE = 140;
