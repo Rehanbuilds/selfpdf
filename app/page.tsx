@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight, Shield, Zap, Lock, Github, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { AnimatedHero } from '@/components/animated-hero';
@@ -136,7 +137,7 @@ export default function HomePage() {
             </div>
             
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {pdfTools.slice(0, 8).map((tool) => {
+              {[...pdfTools.filter((tool) => tool.id !== 'pdf-to-markdown').slice(0, 7), pdfTools.find((tool) => tool.id === 'pdf-to-markdown')!].map((tool) => {
                 const Icon = tool.icon;
                 return (
                   <Card key={tool.id} className="group transition-all hover:shadow-lg">

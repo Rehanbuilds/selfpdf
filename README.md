@@ -1,169 +1,265 @@
-# SelfPDF - The Ultimate Open-Source PDF Toolkit
+# SelfPDF
 
 <p align="center">
-  <img src="public/selfpdf-logo.png" alt="SelfPDF Logo" width="100"/>
+  <a href="https://www.selfpdf.xyz">
+    <img src="public/selfpdf-logo.png" alt="SelfPDF" width="96" />
+  </a>
+</p>
+
+<h1 align="center">SelfPDF</h1>
+
+<p align="center">
+  A privacy-first, open-source PDF toolkit that runs in your browser.
+  Merge, split, compress, convert, edit, sign, secure, and extract content from PDFs without uploading documents to a server.
 </p>
 
 <p align="center">
-  A free, fast, and completely private PDF toolkit built with modern web technologies. Process your documents entirely in your browser with zero server uploads—your data never leaves your device.
+  <a href="https://www.selfpdf.xyz">Live app</a> ·
+  <a href="https://www.selfpdf.xyz/tools">PDF tools</a> ·
+  <a href="https://www.selfpdf.xyz/docs">Documentation</a> ·
+  <a href="https://github.com/Rehanbuilds/selpdf-v2/issues">Report an issue</a>
 </p>
 
 <p align="center">
-  <a href="#features"><strong>Features</strong></a> · 
-  <a href="#getting-started"><strong>Getting Started</strong></a> · 
-  <a href="#tech-stack"><strong>Tech Stack</strong></a> · 
-  <a href="#contributing"><strong>Contributing</strong></a>
+  <a href="https://www.selfpdf.xyz"><img src="https://img.shields.io/badge/Live%20app-selfpdf.xyz-6d4aff?style=flat-square" alt="Live app" /></a>
+  <a href="https://github.com/Rehanbuilds/selpdf-v2"><img src="https://img.shields.io/github/stars/Rehanbuilds/selpdf-v2?style=flat-square&label=stars" alt="GitHub stars" /></a>
+  <a href="https://github.com/Rehanbuilds/selpdf-v2/issues"><img src="https://img.shields.io/github/issues/Rehanbuilds/selpdf-v2?style=flat-square" alt="GitHub issues" /></a>
+  <a href="https://github.com/Rehanbuilds/selpdf-v2"><img src="https://img.shields.io/github/last-commit/Rehanbuilds/selpdf-v2?style=flat-square" alt="Last commit" /></a>
+  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js" alt="Next.js 16" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /></a>
 </p>
 
----
+## Contents
 
-## 🚀 Why SelfPDF?
+- [Why SelfPDF](#why-selfpdf)
+- [Features](#features)
+- [Privacy model](#privacy-model)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Project structure](#project-structure)
+- [Configuration](#configuration)
+- [Development workflow](#development-workflow)
+- [Contributing](#contributing)
+- [Security](#security)
+- [License](#license)
 
-In a world where data privacy is constantly compromised, SelfPDF brings the power of desktop PDF tools straight to your browser. By utilizing client-side processing, SelfPDF guarantees that **your files are never uploaded to any server**. Everything runs locally, ensuring zero wait times for uploads/downloads and 100% privacy for your sensitive documents.
+## Why SelfPDF?
 
-## ✨ Features
+Most online PDF services require you to upload documents before you can work with them. SelfPDF takes a different approach: supported PDF operations happen locally in the browser, so files can be processed without a document upload workflow.
 
-SelfPDF offers a comprehensive suite of tools categorized for your convenience. Whether you need to organize pages, convert formats, edit content, or secure your files, we've got you covered.
+SelfPDF is designed for people who need practical PDF tools while keeping sensitive documents under their control. It is useful for personal documents, business paperwork, study materials, forms, reports, and developer workflows involving PDF content.
 
-### 📁 Organize
-*   **Merge PDF** - Combine multiple PDFs into a single, continuous document.
-*   **Split PDF** - Extract specific pages or split a PDF into individual pages.
-*   **Compress PDF** - Shrink your PDF file size while maintaining excellent quality.
-*   **Repair PDF** - Fix and recover data from corrupted or damaged PDF files.
+## Features
 
-### 🔄 Convert
-*   **PDF to Images** - Convert your PDF pages into high-quality PNG or JPG images.
-*   **Images to PDF** - Compile a list of images into a single PDF document.
-*   **PDF to Word** - Convert PDF files into editable DOCX format.
-*   **Word to PDF** - Generate standard PDF documents from DOCX files.
-*   **PDF to PowerPoint** - Transform PDFs into presentation-ready PPTX slides.
-*   **PowerPoint to PDF** - Convert PPTX presentations into universally accessible PDFs.
-*   **PDF to Excel** - Extract tables from your PDFs into editable XLSX spreadsheets.
-*   **Excel to PDF** - Convert XLSX data sheets into clean, formatted PDFs.
-*   **HTML to PDF** - Turn raw HTML and CSS into a beautifully rendered PDF.
-*   **OCR Scanner** - Extract raw, selectable text from scanned image-based PDFs.
-*   **Scan PDF** - Scan physical documents directly into PDF format.
+### Organize PDFs
 
-### ✏️ Edit
-*   **Rotate PDF** - Rotate individual pages or the entire document (90°, 180°, 270°).
-*   **Watermark** - Stamp your documents with text or image watermarks.
-*   **Page Numbers** - Easily add customizable page numbers to your PDFs.
-*   **Sign PDF** - Add digital signatures or draw your signature on your document.
-*   **Crop PDF** - Adjust margins and crop out unwanted areas of your PDF pages.
+- **Merge PDF** — Combine multiple documents into one PDF.
+- **Split PDF** — Extract selected pages or create separate files.
+- **Rotate PDF** — Rotate individual pages or an entire document.
+- **Crop PDF** — Remove unwanted margins and page areas.
+- **Page numbers** — Add page numbers with configurable placement and styling.
+- **Repair PDF** — Attempt to recover usable content from damaged PDFs.
 
-### 🔐 Security
-*   **Protect PDF** - Secure your sensitive PDFs with strong password encryption.
-*   **Unlock PDF** - Remove password protection and restrictions from your PDFs.
+### Convert PDFs
 
-## 🛠 Tech Stack
+- **PDF to Word** — Convert PDF content to editable DOCX files.
+- **Word to PDF** — Convert DOCX documents into PDF files.
+- **PDF to PowerPoint** — Create presentation-ready PPTX output.
+- **PowerPoint to PDF** — Convert presentations into PDF documents.
+- **PDF to Excel** — Extract tabular content into XLSX spreadsheets.
+- **Excel to PDF** — Export spreadsheet content as PDF.
+- **PDF to images** — Render PDF pages as PNG or JPG images.
+- **Images to PDF** — Combine images into a single PDF.
+- **HTML to PDF** — Turn HTML content into a PDF document.
 
-SelfPDF is built with a modern, scalable, and highly performant tech stack:
+### PDF Intelligence
 
-*   **Framework:** [Next.js](https://nextjs.org/) (App Router)
-*   **Language:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
-*   **PDF Processing:** [pdf-lib](https://pdf-lib.js.org/) & [PDF.js](https://mozilla.github.io/pdf.js/)
-*   **State Management:** [Zustand](https://github.com/pmndrs/zustand)
-*   **Deployment:** Optimized for Vercel
+- **PDF to Markdown** — Extract text from a PDF and format it as clean, copyable Markdown for notes, documentation, repositories, and LLM workflows.
+- **OCR PDF** — Recognize text in scanned or image-based documents.
+- **AI summarizer** — Generate concise summaries and key points from supported document content.
+- **Translate PDF** — Translate PDF text while preserving the document structure where supported.
 
-## 💻 Getting Started
+### Edit PDFs
+
+- **Watermark PDF** — Add text or image watermarks.
+- **Sign PDF** — Add a drawn or typed signature.
+- **Scan PDF** — Create PDFs from scanned documents and images.
+
+### PDF security
+
+- **Protect PDF** — Add password protection and encryption.
+- **Unlock PDF** — Remove password protection from files you are authorized to access.
+
+Browse the complete collection at [selfpdf.xyz/tools](https://www.selfpdf.xyz/tools).
+
+## Privacy model
+
+SelfPDF is built around local-first document processing:
+
+- **No document upload required** for supported client-side tools.
+- **Browser-based processing** keeps eligible files on your device.
+- **No filenames or document contents** are used as analytics data.
+- **Open source code** makes the implementation inspectable and self-hostable.
+
+Some features depend on browser capabilities and third-party libraries. Always review the behavior of a specific tool before processing highly sensitive information, and do not use SelfPDF to bypass document permissions or access controls.
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org/) with the App Router
+- [React 19](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/)
+- [pdf-lib](https://pdf-lib.js.org/) for PDF manipulation
+- [PDF.js](https://mozilla.github.io/pdf.js/) for PDF parsing and rendering
+- [Tesseract.js](https://tesseract.projectnaptha.com/) for browser-based OCR
+- [Mammoth](https://github.com/mwilliamson/mammoth.js) and [docx](https://github.com/dolanmiu/docx) for DOCX workflows
+- [PptxGenJS](https://gitbrent.com/gitbrent/PptxGenJS) for PowerPoint generation
+- [SheetJS](https://sheetjs.com/) for spreadsheet workflows
+- [Zustand](https://github.com/pmndrs/zustand) for client state
+- [Vercel](https://vercel.com/) for deployment
+
+## Getting started
 
 ### Prerequisites
 
-Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+- [Node.js](https://nodejs.org/) 20 or newer
+- npm, pnpm, or Yarn
+- A modern browser with JavaScript enabled
 
 ### Installation
 
-Clone the repository and install the dependencies:
+```bash
+git clone https://github.com/Rehanbuilds/selpdf-v2.git
+cd selpdf-v2
+npm install
+```
+
+If you use another package manager:
 
 ```bash
-# Clone the repository
-git clone https://github.com/Rehanbuilds/selpdf-v2.git
-cd selfpdf
-
-# Install dependencies using your preferred package manager
-npm install
-# or
 pnpm install
 # or
 yarn install
 ```
 
-### Development
-
-Run the local development server:
+### Run locally
 
 ```bash
 npm run dev
-# or
-pnpm dev
-# or
-yarn dev
 ```
 
-Navigate to `http://localhost:3000` in your browser to explore the application.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
-
-To create an optimized production build:
+### Production build
 
 ```bash
 npm run build
 npm start
 ```
 
-## 📂 Project Structure
+### Lint
 
-```text
-selfpdf/
-├── app/
-│   ├── about/          # About page
-│   ├── docs/           # Documentation pages
-│   ├── privacy/        # Privacy Policy
-│   ├── terms/          # Terms of Service
-│   ├── tools/          # All individual PDF tool pages (/merge, /split, etc.)
-│   └── page.tsx        # Application landing page
-├── components/
-│   ├── pdf/            # Core PDF processing components (Dropzones, Layouts, etc.)
-│   ├── ui/             # Reusable shadcn/ui components
-│   ├── header.tsx      # Global navigation header
-│   └── footer.tsx      # Global footer
-├── lib/
-│   ├── config/         # Tool registry and configuration (tools.ts)
-│   ├── pdf/            # PDF manipulation utilities and conversion logic
-│   └── store/          # Zustand global state (pdf-store.ts)
-└── public/             # Static assets
+```bash
+npm run lint
 ```
 
-## 🤝 Contributing
+## Project structure
 
-SelfPDF is a community-driven open-source project. We welcome contributions of all kinds:
+```text
+selpdf-v2/
+├── app/
+│   ├── about/                 # About page
+│   ├── blogs/                 # SEO-friendly PDF guides
+│   ├── docs/                  # Product and developer documentation
+│   ├── tools/                 # Individual PDF tools
+│   │   └── pdf-to-markdown/   # PDF Intelligence Markdown converter
+│   ├── privacy/               # Privacy policy
+│   ├── terms/                 # Terms of service
+│   └── page.tsx               # Landing page
+├── components/
+│   ├── pdf/                   # Upload, processing, and PDF UI components
+│   ├── ui/                    # Shared UI primitives
+│   ├── header.tsx             # Site header
+│   └── footer.tsx             # Site footer
+├── lib/
+│   ├── config/                # Tool registry and application configuration
+│   ├── pdf/                   # PDF parsing and conversion utilities
+│   ├── seo/                   # Tool SEO profiles and structured content
+│   └── store/                  # Client-side application state
+├── public/                    # Static assets
+├── instrumentation-client.ts  # Client analytics initialization
+├── next.config.mjs            # Next.js configuration
+└── package.json                # Scripts and dependencies
+```
 
-1.  **Bug Reports & Feature Requests**: Use the issue tracker to report bugs or suggest new features.
-2.  **Code Contributions**: 
-    - Fork the repository.
-    - Create a new branch (`git checkout -b feature/amazing-feature`).
-    - Commit your changes (`git commit -m 'Add amazing feature'`).
-    - Push to the branch (`git push origin feature/amazing-feature`).
-    - Open a Pull Request.
-3.  **UI/UX Improvements**: Help us make the tools even more intuitive and accessible.
+## Configuration
 
-Please ensure your code follows the existing style conventions and passes all type checks.
+The core local PDF tools do not require an API key or database. Optional deployment settings are managed through your hosting provider's environment-variable configuration.
 
-## 🛡️ Privacy by Design
+For local development, place non-secret development variables in `.env.local` when a feature requires them. Never commit secrets, private tokens, or production credentials to the repository.
 
-Privacy isn't just a feature; it's the core philosophy of SelfPDF.
-- **Zero Uploads:** No document is ever transmitted over the network.
-- **Client-Side Execution:** All PDF manipulation relies entirely on your browser's processing power.
-- **No Trackers:** We don't embed third-party analytics that track your document usage.
+## Development workflow
 
-## 📄 License
+1. Create a focused branch from the current default branch.
+2. Install dependencies with the package manager used by the project.
+3. Run `npm run dev` while developing.
+4. Run `npm run lint` and `npm run build` before opening a pull request.
+5. Test the affected tool with representative PDFs, including an error case where appropriate.
+6. Explain user-visible changes and privacy implications in the pull request description.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Contributing
 
----
+Contributions are welcome. You can help by fixing bugs, improving accessibility, adding tests, improving documentation, or proposing new privacy-preserving PDF workflows.
+
+### Report a bug
+
+Before opening an issue, search [existing issues](https://github.com/Rehanbuilds/selpdf-v2/issues). Include:
+
+- The tool and route where the issue occurs
+- Browser and operating system
+- Steps to reproduce
+- Expected and actual behavior
+- A minimal sample file or reproducible example, if safe to share
+- Console or build errors with sensitive information removed
+
+### Suggest a feature
+
+Describe the user problem, the proposed workflow, privacy considerations, and whether the feature can run entirely in the browser.
+
+### Open a pull request
+
+```bash
+git checkout -b feat/your-change
+# Make and test your changes
+git add .
+git commit -m "feat: describe your change"
+git push origin feat/your-change
+```
+
+Then open a pull request on GitHub. Keep pull requests focused, document behavior changes, and avoid including generated files or sensitive documents.
+
+## Security
+
+Please do not disclose security vulnerabilities in a public issue. Until a dedicated security contact is published, use GitHub's private vulnerability reporting when available or contact the repository maintainers through the repository's private channels.
+
+Never include real personal documents, credentials, access tokens, or private data in issues, pull requests, screenshots, or test fixtures.
+
+## License
+
+The repository's license should be documented in a `LICENSE` file before distributing or embedding SelfPDF. If you add or confirm a license, update this section and the license badge accordingly.
+
+## Links
+
+- [SelfPDF web app](https://www.selfpdf.xyz)
+- [PDF tools](https://www.selfpdf.xyz/tools)
+- [Documentation](https://www.selfpdf.xyz/docs)
+- [Blog](https://www.selfpdf.xyz/blogs)
+- [Privacy policy](https://www.selfpdf.xyz/privacy)
+- [GitHub repository](https://github.com/Rehanbuilds/selpdf-v2)
 
 <p align="center">
-  <b>Built with ❤️ for privacy and the open-source community.</b><br/>
-  <b>Built by Rehan Builds</b>
+  <strong>Build privately. Work faster. Keep control of your PDFs.</strong>
+</p>
+
+<p align="center">
+  Made for the open-source community by <a href="https://github.com/Rehanbuilds">Rehan Builds</a>.
 </p>
