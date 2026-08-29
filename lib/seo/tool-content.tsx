@@ -54,20 +54,7 @@ const profileAliases: Record<string, string> = {
 function buildContent(title: string, description: string): ToolSeoContent {
   const profile = profiles[title] ?? profiles[profileAliases[title]];
   if (!profile) {
-    return {
-      title,
-      description,
-      metaTitle: `${title} | Free PDF Tool | SelfPDF`,
-      metaDescription: `${description}. Process your PDF in the browser with SelfPDF.`,
-      keywords: [title.toLowerCase(), 'free PDF tool', 'online PDF editor'],
-      intro: description,
-      howTo: ['Choose a PDF file.', 'Apply the available tool options.', 'Download your processed PDF.'],
-      details: `Use ${title.toLowerCase()} for a focused PDF workflow in your browser.`,
-      useCases: ['Prepare documents for sharing', 'Organize work and school files', 'Create an archive copy'],
-      privacy: 'Process only documents you are authorized to use and keep an original backup.',
-      faqs: [{ question: `What does ${title} do?`, answer: description + '.' }],
-      related: [{ href: '/tools', label: 'browse all PDF tools' }],
-    };
+    throw new Error(`Missing SEO profile for tool: ${title}`);
   }
   const metaTitle = `${profile.keywords[0][0].toUpperCase() + profile.keywords[0].slice(1)} Free | SelfPDF`;
   return { title, description, metaTitle, metaDescription: `${profile.intro} Try SelfPDF in your browser.`, ...profile, privacy: 'SelfPDF is designed for browser-based document processing without an account. Process only files you are authorized to use, and keep a local backup of important originals.' };
