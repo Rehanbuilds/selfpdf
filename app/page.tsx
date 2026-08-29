@@ -20,11 +20,13 @@ export const metadata: Metadata = {
     url: 'https://www.selfpdf.xyz/',
     title: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
     description: 'Fast, private PDF tools to merge, compress, split, convert, edit, sign, and protect PDF files online.',
+    images: [{ url: '/selfpdf-social-preview.png', width: 1200, height: 630, alt: 'SelfPDF open source PDF toolkit' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Free PDF Tools Online — SelfPDF',
     description: 'Free, private PDF tools for merging, compressing, converting, editing, and signing files online.',
+    images: ['/selfpdf-social-preview.png'],
   },
 };
 
