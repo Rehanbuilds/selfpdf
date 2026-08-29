@@ -711,6 +711,24 @@ export default function DocsPage() {
                 </div>
               </section>
 
+              {/* Advanced PDF workflows */}
+              <section id="advanced-pdf-workflows" className="scroll-mt-28 pb-4">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight">Advanced PDF Workflows</h2>
+                <p className="mb-6 text-lg text-muted-foreground">These browser-first tools help you prepare, review, and transform documents without uploading the source file.</p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {[
+                    ['Fill PDF Forms', '/tools/fill-pdf', 'Detect interactive AcroForm fields, edit text values, and download a completed copy. PDFs without editable fields need a compatible form editor.'],
+                    ['Redact PDF', '/tools/redact-pdf', 'Add opaque redaction areas by page and PDF coordinates. The marks are drawn into the generated copy; always reopen and test the result before sharing.'],
+                    ['Compare PDF', '/tools/compare-pdf', 'Extract both documents page by page and review an editable unified comparison with original and revised text sections.'],
+                    ['PDF to JPG and PNG', '/tools/pdf-to-jpg', 'Render every page as an image and download all outputs together in a ZIP archive. JPG is smaller; PNG preserves lossless detail.'],
+                    ['PDF to Text', '/tools/pdf-to-text', 'Extract selectable text into a copyable and downloadable TXT document. Scanned pages should go through OCR first.'],
+                    ['Delete and Reorder Pages', '/tools/delete-pdf-pages', 'Remove selected pages or provide a new page order, then download a separate PDF while keeping the original unchanged.'],
+                  ].map(([title, href, body]) => (
+                    <Card key={title}><CardContent className="flex flex-col gap-2 p-5"><h3 className="font-semibold"><Link className="hover:text-primary" href={href}>{title}</Link></h3><p className="text-sm leading-6 text-muted-foreground">{body}</p></CardContent></Card>
+                  ))}
+                </div>
+              </section>
+
               {/* FAQ */}
               <section id="faq" className="scroll-mt-28 pb-4">
                 <h2 className="mb-6 text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>

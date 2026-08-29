@@ -80,12 +80,31 @@ export function downloadImage(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-export function downloadZip(blobs: Blob[], filenames: string[], zipName: string) {
-  // For simplicity, download images individually
-  // In production, you'd use a library like JSZip
-  blobs.forEach((blob, index) => {
-    downloadImage(blob, filenames[index]);
-  });
+export async function downloadZip(blobs: Blob[], filenames: string[], zipName: string) {
+  const JSZip = (await import('jszip')).default;
+  const zip = new JSZip();
+  blobs.forEach((blob, index) => zip.file(filenames[index] || `page-${index + 1}`, blob));
+  const archive = await zip.generateAsync({ type: 'blob' });
+  downloadImage(archive, zipName);
+}
+
+export async function redactPDF(file: File, marks: { page: number; x: number; y: number; width: number; height: number }[]): Promise<Uint8Array> {
+  const pdfjsLib = await import('pdfjs-dist');
+  if (typeof window !== 'undefined') pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version || '5.4.530'}/build/pdf.worker.min.mjs`;
+  const source = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
+  const output = await (await import('pdf-lib')).PDFDocument.create();
+  for (let number = 1; number <= source.numPages; number++) {
+    const page = await source.getPage(number); const scale = 2; const viewport = page.getViewport({ scale });
+    const canvas = document.createElement('canvas'); canvas.width = viewport.width; canvas.height = viewport.height;
+    const context = canvas.getContext('2d'); if (!context) continue;
+    await page.render({ canvasContext: context, viewport, canvas }).promise;
+    context.fillStyle = '#000';
+    marks.filter((mark) => mark.page === number).forEach((mark) => context.fillRect(mark.x * scale, viewport.height - (mark.y + mark.height) * scale, mark.width * scale, mark.height * scale));
+    const image = await new Promise<Blob>((resolve) => canvas.toBlob((blob) => resolve(blob || new Blob()), 'image/png'));
+    const embedded = await output.embedPng(await image.arrayBuffer()); const outPage = output.addPage([viewport.width / scale, viewport.height / scale]);
+    outPage.drawImage(embedded, { x: 0, y: 0, width: viewport.width / scale, height: viewport.height / scale });
+  }
+  return output.save();
 }
 
 export async function extractTextFromPDF(file: File, onProgress?: (progress: number) => void): Promise<string[]> {

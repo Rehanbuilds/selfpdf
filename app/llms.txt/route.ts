@@ -38,6 +38,14 @@ const body = `# SelfPDF
 - [Repair PDF](${siteUrl}/tools/repair): Attempt to repair corrupted PDF files.
 - [Protect PDF](${siteUrl}/tools/protect): Add password protection to a PDF.
 - [Unlock PDF](${siteUrl}/tools/unlock): Remove password protection from a PDF when the password is available.
+- [Fill PDF](${siteUrl}/tools/fill-pdf): Fill PDF form fields in a browser workflow.
+- [Redact PDF](${siteUrl}/tools/redact-pdf): Prepare sensitive PDF content for secure redaction review.
+- [Compare PDF](${siteUrl}/tools/compare-pdf): Compare two PDF documents and review extracted differences.
+- [PDF to JPG](${siteUrl}/tools/pdf-to-jpg): Convert PDF pages to JPG images.
+- [PDF to PNG](${siteUrl}/tools/pdf-to-png): Convert PDF pages to PNG images.
+- [PDF to Text](${siteUrl}/tools/pdf-to-text): Extract selectable PDF text.
+- [Delete PDF Pages](${siteUrl}/tools/delete-pdf-pages): Remove selected pages from a PDF.
+- [Reorder PDF Pages](${siteUrl}/tools/reorder-pdf-pages): Rearrange PDF pages into a new order.
 
 ## Important pages
 

@@ -56,10 +56,9 @@ export default function AllToolsPage() {
                             </div>
                             <div>
                               <div className="mb-1 flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                  <h3 className="font-semibold group-hover:text-primary">{tool.name}</h3>
-                                  {tool.isNew && <Badge variant="secondary" className="text-xs">New!</Badge>}
-                                </div>
+                                  <div className="flex items-center gap-2">
+                                    <h3 className="font-semibold group-hover:text-primary">{tool.name}</h3>
+                                  </div>
                                 <ArrowRight className="size-4 opacity-0 transition-opacity group-hover:opacity-100" />
                               </div>
                               <p className="text-sm text-muted-foreground">
