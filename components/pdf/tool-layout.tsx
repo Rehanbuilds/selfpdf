@@ -1,8 +1,6 @@
 import React from "react"
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Type as type, LucideIcon } from 'lucide-react';
-import { trackPdfEvent } from '@/lib/analytics';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -17,15 +15,6 @@ interface ToolLayoutProps {
 }
 
 export function ToolLayout({ title, description, icon: Icon, color, children }: ToolLayoutProps) {
-  const trackedTool = useRef(false)
-
-  useEffect(() => {
-    if (!trackedTool.current) {
-      trackedTool.current = true
-      trackPdfEvent('tool_used', { toolName: title })
-    }
-  }, [title])
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
