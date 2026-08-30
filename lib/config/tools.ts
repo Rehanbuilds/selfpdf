@@ -76,6 +76,16 @@ export const pdfTools: PDFTool[] = [
     color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400',
   },
   {
+    id: 'pdf-editor',
+    name: 'PDF Editor',
+    description: 'Create and edit PDFs in your browser',
+    icon: FilePenLine,
+    href: '/pdf-editor',
+    category: 'edit',
+    color: 'bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-400',
+    isNew: true,
+  },
+  {
     id: 'rotate',
     name: 'Rotate PDF',
     description: 'Rotate PDF pages',
