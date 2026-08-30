@@ -179,6 +179,14 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* PDF Editor */}
+        <section className="border-b py-16 md:py-24">
+          <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+            <div className="max-w-2xl"><Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/15">PDF Editor</Badge><h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">Create. Edit. Export.</h2><p className="mt-4 text-pretty text-lg leading-7 text-muted-foreground">A powerful PDF editor that works directly in your browser. Create a PDF from scratch or edit an existing document with text, images, shapes, tables, drawings, and signature placement.</p><p className="mt-3 text-sm text-muted-foreground">Free, no signup, privacy-focused, and open source.</p></div>
+            <div className="flex shrink-0 flex-col items-start gap-3"><Button size="lg" asChild><Link href="/pdf-editor">Open PDF Editor <ArrowRight className="ml-2 size-4" /></Link></Button><span className="text-sm text-muted-foreground">Start with a blank page or open an existing PDF.</span></div>
+          </div>
+        </section>
+
         {/* Use Cases Bento Grid */}
         <section className="border-y bg-muted/30 py-16 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
