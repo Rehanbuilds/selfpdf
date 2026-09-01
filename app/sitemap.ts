@@ -10,5 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/docs`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${siteUrl}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${siteUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${siteUrl}/blogs/how-to-edit-a-pdf-online-for-free-without-installing-software`, lastModified: new Date('2026-09-01T00:00:00.000Z'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/blogs/how-to-extract-text-from-a-pdf-7-easy-ways`, lastModified: new Date('2026-09-01T00:00:00.000Z'), changeFrequency: 'monthly', priority: 0.7 },
   ]
 }
