@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: blog.description,
     keywords: blog.keywords,
     alternates: { canonical: `https://www.selfpdf.xyz/blogs/${blog.slug}` },
-    openGraph: { type: 'article', title: blog.title, description: blog.description, url: `https://www.selfpdf.xyz/blogs/${blog.slug}`, publishedTime: blog.publishedAt, modifiedTime: blog.updatedAt, authors: ['SelfPDF'] },
-    twitter: { card: 'summary', title: blog.title, description: blog.description },
+    openGraph: { type: 'article', title: blog.title, description: blog.description, url: `https://www.selfpdf.xyz/blogs/${blog.slug}`, publishedTime: blog.publishedAt, modifiedTime: blog.updatedAt, authors: ['SelfPDF'], images: [{ url: '/selfpdf-social-preview.png', width: 1200, height: 630, alt: blog.title }] },
+    twitter: { card: 'summary_large_image', title: blog.title, description: blog.description, images: ['/selfpdf-social-preview.png'] },
   }
 }
 

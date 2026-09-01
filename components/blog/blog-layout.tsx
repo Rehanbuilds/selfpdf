@@ -3,6 +3,11 @@ import type { BlogArticle } from '@/lib/blog/content'
 
 const siteUrl = 'https://www.selfpdf.xyz'
 
+function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g)
+  return <>{parts.map((part, index) => { const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/); return match ? <Link key={`${part}-${index}`} href={match[2]} className="font-medium text-primary underline-offset-4 hover:underline">{match[1]}</Link> : <span key={`${part}-${index}`}>{part}</span> })}</>
+}
+
 export function BlogJsonLd({ blog }: { blog: BlogArticle }) {
   const data = {
     '@context': 'https://schema.org',
@@ -66,8 +71,8 @@ export function BlogArticleView({ blog }: { blog: BlogArticle }) {
         {blog.sections.map((section) => (
           <section key={section.heading} className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold tracking-tight">{section.heading}</h2>
-            {section.paragraphs?.map((paragraph) => <p key={paragraph} className="text-pretty leading-7 text-muted-foreground">{paragraph}</p>)}
-            {section.bullets && <ul className="flex flex-col gap-3 pl-5 text-muted-foreground marker:text-primary">{section.bullets.map((bullet) => <li key={bullet} className="pl-2 leading-7">{bullet}</li>)}</ul>}
+            {section.paragraphs?.map((paragraph) => <p key={paragraph} className="text-pretty leading-7 text-muted-foreground"><RichText text={paragraph} /></p>)}
+            {section.bullets && <ul className="flex flex-col gap-3 pl-5 text-muted-foreground marker:text-primary">{section.bullets.map((bullet) => <li key={bullet} className="pl-2 leading-7"><RichText text={bullet} /></li>)}</ul>}
           </section>
         ))}
       </div>
