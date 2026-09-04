@@ -12,7 +12,7 @@ import { FileList } from '@/components/pdf/file-list';
 import { ProcessingIndicator } from '@/components/pdf/processing-indicator';
 import { FilenameDialog } from '@/components/pdf/filename-dialog';
 import { usePDFStore } from '@/lib/store/pdf-store';
-import { PDFDocument, rgb } from 'pdf-lib';
+import { PDFDocument, degrees, rgb } from 'pdf-lib';
 import { downloadPDF } from '@/lib/pdf/utils';
 
 export default function WatermarkPage() {
@@ -69,7 +69,7 @@ export default function WatermarkPage() {
           size: 60,
           color: rgb(0.5, 0.5, 0.5),
           opacity: opacity,
-          rotate: { angle: 45, type: 'degrees' },
+          rotate: degrees(45),
         });
         
         setProgress(50 + (index / pages.length) * 30);

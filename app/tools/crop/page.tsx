@@ -51,6 +51,7 @@ export default function CropPDFPage() {
       canvas.height = scaledViewport.height;
 
       await page.render({
+        canvas,
         canvasContext: context,
         viewport: scaledViewport,
       }).promise;
