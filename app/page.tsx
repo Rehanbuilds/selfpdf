@@ -140,7 +140,7 @@ export default function HomePage() {
             </div>
             
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {[...pdfTools.filter((tool) => tool.id !== 'pdf-to-markdown').slice(0, 7), pdfTools.find((tool) => tool.id === 'pdf-to-markdown')!].map((tool) => {
+              {[...pdfTools.filter((tool) => !['pdf-to-markdown', 'summarize-pdf', 'translate-pdf'].includes(tool.id)).slice(0, 5), ...pdfTools.filter((tool) => ['pdf-to-markdown', 'summarize-pdf', 'translate-pdf'].includes(tool.id))].map((tool) => {
                 const Icon = tool.icon;
                 return (
                   <Card key={tool.id} className="group relative transition-all hover:shadow-lg">
