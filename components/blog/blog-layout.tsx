@@ -24,6 +24,10 @@ export function BlogJsonLd({ blog }: { blog: BlogArticle }) {
         keywords: blog.keywords.join(', '),
       },
       {
+        '@type': 'BreadcrumbList',
+        itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Blogs', item: `${siteUrl}/blogs` }, { '@type': 'ListItem', position: 2, name: blog.title, item: `${siteUrl}/blogs/${blog.slug}` }],
+      },
+      {
         '@type': 'FAQPage',
         mainEntity: blog.faqs.map((faq) => ({
           '@type': 'Question',
@@ -55,9 +59,14 @@ export function BlogCard({ blog }: { blog: BlogArticle }) {
   )
 }
 
+function headingId(heading: string) { return heading.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') }
+
 export function BlogArticleView({ blog }: { blog: BlogArticle }) {
   return (
-    <article className="mx-auto flex w-full max-w-4xl flex-col gap-12">
+    <article className="mx-auto flex w-full max-w-5xl flex-col gap-12">
+      <details className="rounded-2xl border bg-muted/30 p-5 lg:hidden"><summary className="cursor-pointer font-bold">On this page</summary><nav className="flex flex-col gap-2 pt-4 text-sm text-muted-foreground">{blog.sections.map((section) => <a key={section.heading} href={`#${headingId(section.heading)}`} className="hover:text-primary">{section.heading}</a>)}</nav></details>
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_15rem]">
+        <div className="min-w-0">
       <header className="flex flex-col gap-6 border-b pb-10">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
           <span>{blog.category}</span><span aria-hidden="true">•</span><span>{blog.readTime}</span>
@@ -69,12 +78,18 @@ export function BlogArticleView({ blog }: { blog: BlogArticle }) {
 
       <div className="flex flex-col gap-10">
         {blog.sections.map((section) => (
-          <section key={section.heading} className="flex flex-col gap-4">
+          <section key={section.heading} id={headingId(section.heading)} className="scroll-mt-8 flex flex-col gap-4">
             <h2 className="text-2xl font-bold tracking-tight">{section.heading}</h2>
             {section.paragraphs?.map((paragraph) => <p key={paragraph} className="text-pretty leading-7 text-muted-foreground"><RichText text={paragraph} /></p>)}
+            {section.callout && <div className="rounded-xl border-l-4 border-primary bg-primary/5 px-5 py-4 font-semibold text-primary">{section.callout}</div>}
+            {section.steps && <div className="grid gap-3 sm:grid-cols-2">{section.steps.map((step, index) => <div key={step.title} className="rounded-xl border bg-card p-5"><p className="text-sm font-bold text-primary">Step {index + 1}</p><h3 className="mt-2 font-bold">{step.title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{step.description}</p></div>)}</div>}
+            {section.table && <div className="overflow-x-auto rounded-xl border"><table className="min-w-full text-left text-sm"><thead className="bg-muted/50"><tr>{section.table.headers.map((header) => <th key={header} className="whitespace-nowrap px-4 py-3 font-bold">{header}</th>)}</tr></thead><tbody>{section.table.rows.map((row) => <tr key={row[0]} className="border-t">{row.map((cell) => <td key={cell} className="min-w-40 px-4 py-3 align-top leading-6 text-muted-foreground">{cell}</td>)}</tr>)}</tbody></table></div>}
             {section.bullets && <ul className="flex flex-col gap-3 pl-5 text-muted-foreground marker:text-primary">{section.bullets.map((bullet) => <li key={bullet} className="pl-2 leading-7"><RichText text={bullet} /></li>)}</ul>}
           </section>
         ))}
+      </div>
+        </div>
+        <aside className="hidden lg:block"><div className="sticky top-24 rounded-2xl border bg-muted/30 p-5"><p className="text-sm font-bold">On this page</p><nav className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground">{blog.sections.map((section) => <a key={section.heading} href={`#${headingId(section.heading)}`} className="hover:text-primary">{section.heading}</a>)}</nav></div></aside>
       </div>
 
       <section className="flex flex-col gap-6 rounded-2xl border bg-muted/30 p-6 sm:p-8" aria-labelledby="faq-heading">
