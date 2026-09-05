@@ -83,7 +83,6 @@ export const pdfTools: PDFTool[] = [
     href: '/pdf-editor',
     category: 'edit',
     color: 'bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-400',
-    isNew: true,
   },
   {
     id: 'rotate',
@@ -228,28 +227,28 @@ export const pdfTools: PDFTool[] = [
     id: 'translate-pdf', name: 'Translate PDF', description: 'Translate PDF documents into your preferred language with AI.', icon: Languages, href: '/translate-pdf', category: 'intelligence', color: 'bg-violet-50 text-violet-600 dark:bg-violet-950 dark:text-violet-400', isNew: true,
   },
   {
-    id: 'fill-pdf', name: 'Fill PDF', description: 'Fill PDF forms in your browser', icon: FilePenLine, href: '/tools/fill-pdf', category: 'edit', color: 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400', isNew: true,
+    id: 'fill-pdf', name: 'Fill PDF', description: 'Fill PDF forms in your browser', icon: FilePenLine, href: '/tools/fill-pdf', category: 'edit', color: 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400',
   },
   {
-    id: 'redact-pdf', name: 'Redact PDF', description: 'Hide sensitive content in PDFs', icon: EyeOff, href: '/tools/redact-pdf', category: 'security', color: 'bg-red-50 text-red-600 dark:bg-red-950 dark:text-red-400', isNew: true,
+    id: 'redact-pdf', name: 'Redact PDF', description: 'Hide sensitive content in PDFs', icon: EyeOff, href: '/tools/redact-pdf', category: 'security', color: 'bg-red-50 text-red-600 dark:bg-red-950 dark:text-red-400',
   },
   {
-    id: 'compare-pdf', name: 'Compare PDF', description: 'Compare two PDF documents', icon: GitCompare, href: '/tools/compare-pdf', category: 'organize', color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400', isNew: true,
+    id: 'compare-pdf', name: 'Compare PDF', description: 'Compare two PDF documents', icon: GitCompare, href: '/tools/compare-pdf', category: 'organize', color: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950 dark:text-indigo-400',
   },
   {
-    id: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG', icon: ImageIcon, href: '/tools/pdf-to-jpg', category: 'convert', color: 'bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-400', isNew: true,
+    id: 'pdf-to-jpg', name: 'PDF to JPG', description: 'Convert PDF pages to JPG', icon: ImageIcon, href: '/tools/pdf-to-jpg', category: 'convert', color: 'bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-400',
   },
   {
-    id: 'pdf-to-png', name: 'PDF to PNG', description: 'Convert PDF pages to PNG', icon: ImageIcon, href: '/tools/pdf-to-png', category: 'convert', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950 dark:text-pink-400', isNew: true,
+    id: 'pdf-to-png', name: 'PDF to PNG', description: 'Convert PDF pages to PNG', icon: ImageIcon, href: '/tools/pdf-to-png', category: 'convert', color: 'bg-pink-50 text-pink-600 dark:bg-pink-950 dark:text-pink-400',
   },
   {
-    id: 'pdf-to-text', name: 'PDF to Text', description: 'Extract text from PDF files', icon: TextIcon, href: '/tools/pdf-to-text', category: 'convert', color: 'bg-cyan-50 text-cyan-600 dark:bg-cyan-950 dark:text-cyan-400', isNew: true,
+    id: 'pdf-to-text', name: 'PDF to Text', description: 'Extract text from PDF files', icon: TextIcon, href: '/tools/pdf-to-text', category: 'convert', color: 'bg-cyan-50 text-cyan-600 dark:bg-cyan-950 dark:text-cyan-400',
   },
   {
-    id: 'delete-pdf-pages', name: 'Delete PDF Pages', description: 'Remove pages from a PDF', icon: Trash2, href: '/tools/delete-pdf-pages', category: 'organize', color: 'bg-rose-50 text-rose-600 dark:bg-rose-950 dark:text-rose-400', isNew: true,
+    id: 'delete-pdf-pages', name: 'Delete PDF Pages', description: 'Remove pages from a PDF', icon: Trash2, href: '/tools/delete-pdf-pages', category: 'organize', color: 'bg-rose-50 text-rose-600 dark:bg-rose-950 dark:text-rose-400',
   },
   {
-    id: 'reorder-pdf-pages', name: 'Reorder PDF Pages', description: 'Rearrange PDF pages', icon: ListOrdered, href: '/tools/reorder-pdf-pages', category: 'organize', color: 'bg-teal-50 text-teal-600 dark:bg-teal-950 dark:text-teal-400', isNew: true,
+    id: 'reorder-pdf-pages', name: 'Reorder PDF Pages', description: 'Rearrange PDF pages', icon: ListOrdered, href: '/tools/reorder-pdf-pages', category: 'organize', color: 'bg-teal-50 text-teal-600 dark:bg-teal-950 dark:text-teal-400',
   },
   {
     id: 'scan',

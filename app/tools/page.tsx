@@ -45,7 +45,7 @@ export default function AllToolsPage() {
                     return (
                       <Card key={tool.id} className="group relative transition-all hover:shadow-lg">
                         <CardContent className="p-6">
-                          {tool.isNew && (
+                          {tool.category === 'intelligence' && tool.isNew && (
                             <Badge className="absolute right-4 top-4 border-primary/20 bg-primary/10 text-primary hover:bg-primary/15">
                               New!
                             </Badge>
