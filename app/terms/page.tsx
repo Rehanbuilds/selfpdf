@@ -27,7 +27,7 @@ const TOC = [
 ];
 
 export default function TermsPage() {
-  const lastUpdated = 'June 21, 2025';
+  const lastUpdated = 'September 6, 2026';
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -48,7 +48,7 @@ export default function TermsPage() {
 
             <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl">Terms of Service</h1>
             <p className="mb-2 text-lg text-muted-foreground">
-              Last updated: <time dateTime="2025-06-21">{lastUpdated}</time>
+              Last updated: <time dateTime="2026-09-06">{lastUpdated}</time>
             </p>
             <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground">
               These Terms of Service govern your use of SelfPDF. We\'ve written them in plain language so you can actually understand what you\'re agreeing to.
@@ -85,7 +85,7 @@ export default function TermsPage() {
 
               {/* Main content */}
               <div className="flex-1 min-w-0">
-                <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
+                <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-28 prose-headings:font-bold prose-h2:text-3xl prose-h2:font-extrabold prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-xl prose-h3:font-extrabold prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
 
                   <h2 id="acceptance">1. Acceptance of Terms</h2>
                   <p>
