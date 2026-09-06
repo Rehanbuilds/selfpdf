@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { pdfTools, toolCategories } from '@/lib/config/tools';
+import { EditorBuildingNotice } from '@/components/editor-building-notice';
 
 export default function AllToolsPage() {
   return (
@@ -50,7 +51,7 @@ export default function AllToolsPage() {
                               New!
                             </Badge>
                           )}
-                          <Link href={tool.href} className="flex flex-col gap-3">
+                          {tool.id === 'pdf-editor' ? <EditorBuildingNotice /> : <Link href={tool.href} className="flex flex-col gap-3">
                             <div className={`inline-flex size-12 items-center justify-center rounded-xl ${tool.color}`}>
                               <Icon className="size-6" />
                             </div>
@@ -65,8 +66,8 @@ export default function AllToolsPage() {
                                 {tool.description}
                               </p>
                             </div>
-                          </Link>
-                        </CardContent>
+</Link>}
+                          </CardContent>
                       </Card>
                     );
                   })}
