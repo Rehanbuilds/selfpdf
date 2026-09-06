@@ -24,6 +24,7 @@ const QUICK_LINKS = [
   { label: 'Convert', href: '#convert', icon: FileType },
   { label: 'Edit', href: '#edit', icon: PenTool },
   { label: 'Security', href: '#security', icon: Shield },
+  { label: 'PDF Intelligence', href: '#intelligence', icon: FileText },
   { label: 'Tips & Limits', href: '#tips', icon: Info },
   { label: 'Self-Hosting', href: '#self-hosting', icon: Terminal },
   { label: 'Contributing', href: '#contributing', icon: Github },
@@ -106,6 +107,9 @@ const ORGANIZE_TOOLS = [
     tips: ['Works best on PDFs with minor structural damage or incomplete writes.'],
     limitations: ['Severely corrupted files with missing data may not be recoverable.'],
   },
+  { id: 'compare-pdf', icon: FileText, name: 'Compare PDF', href: '/tools/compare-pdf', badge: 'Organize', badgeColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300', summary: 'Review two PDF documents side by side.', steps: ['Upload two PDF files.', 'Review both visual previews next to each other.', 'Use the original files to investigate differences.'], tips: ['Upload exactly two PDFs for a meaningful comparison.'], limitations: ['This tool provides visual review rather than semantic change tracking.'] },
+  { id: 'delete-pdf-pages', icon: FileText, name: 'Delete PDF Pages', href: '/tools/delete-pdf-pages', badge: 'Organize', badgeColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300', summary: 'Remove selected pages from a PDF.', steps: ['Upload a PDF.', 'Select pages to remove.', 'Download the new PDF.'], tips: ['Keep a copy of the original before deleting pages.'], limitations: ['The original file remains unchanged on your device.'] },
+  { id: 'reorder-pdf-pages', icon: FileText, name: 'Reorder PDF Pages', href: '/tools/reorder-pdf-pages', badge: 'Organize', badgeColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300', summary: 'Arrange PDF pages in a new order.', steps: ['Upload a PDF.', 'Set the desired page order.', 'Download the reordered PDF.'], tips: ['Use page numbers to define a clear sequence.'], limitations: ['Large files may take longer to render.'] },
 ];
 
 const CONVERT_TOOLS = [
@@ -241,9 +245,13 @@ const CONVERT_TOOLS = [
     tips: ['Use a consistent resolution across all scans for a uniform-looking document.'],
     limitations: ['Image-only PDF — for searchable output, run OCR afterwards.'],
   },
+  { id: 'pdf-to-jpg', icon: ImageIcon, name: 'PDF to JPG', href: '/tools/pdf-to-jpg', badge: 'Convert', badgeColor: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300', summary: 'Convert PDF pages into JPG images.', steps: ['Upload a PDF.', 'Choose the output settings.', 'Download the JPG images.'], tips: ['JPG is useful for compact image sharing.'], limitations: ['Image quality depends on the selected resolution.'] },
+  { id: 'pdf-to-png', icon: ImageIcon, name: 'PDF to PNG', href: '/tools/pdf-to-png', badge: 'Convert', badgeColor: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300', summary: 'Convert PDF pages into PNG images.', steps: ['Upload a PDF.', 'Render the pages.', 'Download the PNG images.'], tips: ['PNG is useful when crisp text and lossless quality matter.'], limitations: ['Large PDFs can produce large image files.'] },
+  { id: 'pdf-to-text', icon: FileText, name: 'PDF to Text', href: '/tools/pdf-to-text', badge: 'Convert', badgeColor: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300', summary: 'Extract selectable text into a downloadable text file.', steps: ['Upload a text-based PDF.', 'Review the extracted text.', 'Copy or download the TXT file.'], tips: ['Use OCR first for scanned PDFs.'], limitations: ['Complex layouts may change reading order.'] },
 ];
 
 const EDIT_TOOLS = [
+  { id: 'pdf-editor', icon: FileText, name: 'PDF Editor', href: '/pdf-editor', badge: 'Edit', badgeColor: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300', summary: 'Create and edit PDFs in your browser.', steps: ['Open the PDF Editor.', 'Add or edit supported page content.', 'Export the finished PDF.'], tips: ['Use the editor for interactive page-level changes.'], limitations: ['Some advanced editing capabilities are still being expanded.'] },
   {
     id: 'rotate',
     icon: RotateCw,
@@ -304,6 +312,7 @@ const EDIT_TOOLS = [
     tips: ['Cropping only adjusts the visible area — it does not permanently delete content outside the crop area in all viewers.'],
     limitations: ['Page dimensions will change after cropping.'],
   },
+  { id: 'fill-pdf', icon: FileText, name: 'Fill PDF', href: '/tools/fill-pdf', badge: 'Edit', badgeColor: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300', summary: 'Fill supported PDF form fields in your browser.', steps: ['Upload a fillable PDF.', 'Enter the form information.', 'Download the completed PDF.'], tips: ['Review every field before downloading.'], limitations: ['Non-fillable PDFs may need the PDF Editor workflow.'] },
 ];
 
 const SECURITY_TOOLS = [
@@ -331,6 +340,13 @@ const SECURITY_TOOLS = [
     tips: ['Only use this tool on PDFs you own or have explicit permission to unlock.'],
     limitations: ['Requires the correct password — SelfPDF does not perform brute-force cracking.'],
   },
+  { id: 'redact-pdf', icon: Shield, name: 'Redact PDF', href: '/tools/redact-pdf', badge: 'Security', badgeColor: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300', summary: 'Cover sensitive content in a PDF before sharing it.', steps: ['Upload the PDF.', 'Mark sensitive content for redaction.', 'Export and review the redacted copy.'], tips: ['Always inspect the exported document before sharing.'], limitations: ['Redaction quality depends on the selected content and PDF structure.'] },
+];
+
+const INTELLIGENCE_TOOLS = [
+  { id: 'pdf-to-markdown', icon: FileText, name: 'PDF to Markdown', href: '/tools/pdf-to-markdown', badge: 'PDF Intelligence', badgeColor: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300', summary: 'Convert PDF text into editable Markdown for notes, documentation, and AI workflows.', steps: ['Upload a text-based PDF.', 'Review the extracted Markdown.', 'Copy or download the Markdown file.'], tips: ['Text-based PDFs produce the cleanest results.', 'Scanned documents should go through OCR first.'], limitations: ['Complex layouts, tables, and scanned pages may need manual cleanup.'] },
+  { id: 'summarize-pdf', icon: FileText, name: 'Summarize PDF', href: '/summarize-pdf', badge: 'PDF Intelligence', badgeColor: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300', summary: 'Create a concise AI-powered summary of a long PDF.', steps: ['Upload your PDF.', 'Choose a summary goal.', 'Review the summary against the original document.'], tips: ['Ask for key points, decisions, risks, or action items.', 'Verify names, numbers, and dates before relying on the result.'], limitations: ['Scanned PDFs need OCR and important claims require human review.'] },
+  { id: 'translate-pdf', icon: FileText, name: 'Translate PDF', href: '/translate-pdf', badge: 'PDF Intelligence', badgeColor: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300', summary: 'Translate PDF text into a selected target language with an AI-assisted workflow.', steps: ['Upload your PDF.', 'Select the target language.', 'Review the translation and formatting before downloading.'], tips: ['Keep a terminology list for technical documents.', 'Check right-to-left scripts, dates, names, and units carefully.'], limitations: ['Exact layout preservation is not guaranteed and regulated content needs qualified review.'] },
 ];
 
 function ToolCard({ tool }: { tool: (typeof ORGANIZE_TOOLS)[0] }) {
@@ -591,6 +607,12 @@ export default function DocsPage() {
                 <div className="space-y-6">
                   {EDIT_TOOLS.map((tool) => <ToolCard key={tool.id} tool={tool} />)}
                 </div>
+              </section>
+
+              {/* PDF Intelligence Tools */}
+              <section id="intelligence" className="scroll-mt-28">
+                <div className="mb-6"><h2 className="text-3xl font-bold tracking-tight"><span className="mr-3 inline-flex size-8 items-center justify-center rounded-lg bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 text-sm font-bold">I</span>PDF Intelligence Tools</h2><p className="mt-2 text-muted-foreground">Extract, summarize, translate, and prepare PDF content for AI-assisted workflows.</p></div>
+                <div className="space-y-6">{INTELLIGENCE_TOOLS.map((tool) => <ToolCard key={tool.id} tool={tool} />)}</div>
               </section>
 
               {/* Security Tools */}

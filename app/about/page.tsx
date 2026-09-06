@@ -39,7 +39,7 @@ const VALUES = [
     title: 'Free Forever',
     color: 'bg-rose-50 dark:bg-rose-950 text-rose-600 dark:text-rose-400',
     description:
-      'There are no premium tiers, no paywalls, no credits system. Every tool — all 22 of them — is free to use as much as you need, forever.',
+      'There are no premium tiers, no paywalls, no credits system. Every tool is free to use as much as you need, forever.',
   },
   {
     icon: Globe,
@@ -221,7 +221,7 @@ export default function AboutPage() {
             <div className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">The Toolkit</div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">22 tools, zero compromises</h2>
             <p className="mb-10 text-lg text-muted-foreground">
-              Organised into four categories so you can find what you need instantly.
+              Organised into five categories so you can find what you need instantly.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -230,25 +230,31 @@ export default function AboutPage() {
                   cat: 'Organize',
                   color: 'border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-950/30',
                   badge: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
-                  tools: ['Merge PDF', 'Split PDF', 'Compress PDF', 'Repair PDF'],
+                  tools: ['Merge PDF', 'Split PDF', 'Compress PDF', 'Repair PDF', 'Compare PDF', 'Delete PDF Pages', 'Reorder PDF Pages'],
                 },
                 {
                   cat: 'Convert',
                   color: 'border-orange-200 dark:border-orange-800 bg-orange-50/50 dark:bg-orange-950/30',
                   badge: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300',
-                  tools: ['PDF to Images', 'Images to PDF', 'PDF to Word', 'Word to PDF', 'PDF to PowerPoint', 'PowerPoint to PDF', 'PDF to Excel', 'Excel to PDF', 'HTML to PDF', 'OCR Scanner', 'Scan PDF'],
+                  tools: ['PDF to Images', 'PDF to JPG', 'PDF to PNG', 'Images to PDF', 'PDF to Word', 'Word to PDF', 'PDF to PowerPoint', 'PowerPoint to PDF', 'PDF to Excel', 'Excel to PDF', 'HTML to PDF', 'OCR Scanner', 'PDF to Text', 'Scan PDF'],
                 },
                 {
                   cat: 'Edit',
                   color: 'border-purple-200 dark:border-purple-800 bg-purple-50/50 dark:bg-purple-950/30',
                   badge: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300',
-                  tools: ['Rotate PDF', 'Watermark', 'Page Numbers', 'Sign PDF', 'Crop PDF'],
+                  tools: ['PDF Editor', 'Rotate PDF', 'Watermark', 'Page Numbers', 'Sign PDF', 'Crop PDF', 'Fill PDF'],
                 },
                 {
                   cat: 'Security',
                   color: 'border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/30',
                   badge: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300',
-                  tools: ['Unlock PDF', 'Protect PDF'],
+                  tools: ['Unlock PDF', 'Protect PDF', 'Redact PDF'],
+                },
+                {
+                  cat: 'PDF Intelligence',
+                  color: 'border-violet-200 dark:border-violet-800 bg-violet-50/50 dark:bg-violet-950/30',
+                  badge: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300',
+                  tools: ['PDF to Markdown', 'Summarize PDF', 'Translate PDF'],
                 },
               ].map(({ cat, color, badge, tools }) => (
                 <Card key={cat} className={`border ${color}`}>

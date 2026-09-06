@@ -39,7 +39,7 @@ const HIGHLIGHTS = [
 ];
 
 export default function PrivacyPage() {
-  const lastUpdated = 'June 21, 2025';
+  const lastUpdated = 'September 6, 2026';
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
 
             <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl">Privacy Policy</h1>
             <p className="mb-2 text-lg text-muted-foreground">
-              Last updated: <time dateTime="2025-06-21">{lastUpdated}</time>
+              Last updated: <time dateTime="2026-09-06">{lastUpdated}</time>
             </p>
             <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground">
               Privacy isn\'t a feature we added — it\'s the foundation SelfPDF was built on. This document explains, in plain language, what data we collect
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
         {/* ─── Full Policy ──────────────────────────────────────── */}
         <section className="border-t pb-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-16">
-            <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-24 prose-headings:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:font-bold prose-p:text-muted-foreground prose-li:text-muted-foreground">
+            <div className="prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-24 prose-headings:font-bold prose-h2:text-3xl prose-h2:font-extrabold prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-xl prose-h3:font-extrabold prose-p:text-muted-foreground prose-li:text-muted-foreground">
 
               <h2>1. Who We Are</h2>
               <p>
