@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, Twitter } from 'lucide-react';
+import { Github } from 'lucide-react';
 import Image from 'next/image';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 
@@ -33,13 +33,13 @@ export function Footer() {
                 <span className="sr-only">GitHub</span>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/MRehan_5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex size-9 items-center justify-center rounded-lg border bg-background transition-colors hover:bg-accent"
               >
-                <Twitter className="size-4" />
-                <span className="sr-only">Twitter</span>
+                <span aria-hidden="true" className="text-sm font-bold leading-none">X</span>
+                <span className="sr-only">X on X</span>
               </a>
             </div>
           </div>
