@@ -139,7 +139,15 @@ export function Footer() {
         </div>
         
         <div className="mt-8 border-t pt-8">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-5">
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a href="https://www.producthunt.com/products/selfpdf?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-selfpdf" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF on Product Hunt">
+                <img alt="SelfPDF - The open-source PDF workspace for everyone | Product Hunt" width="250" height="54" loading="lazy" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1243600&theme=light&t=1788776484550" />
+              </a>
+              <a href="https://www.scrolllaunch.com/products/selfpdf?ref=badge" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF featured on ScrollLaunch">
+                <img src="https://www.scrolllaunch.com/api/badge/selfpdf" alt="Featured on ScrollLaunch" width="220" height="48" loading="lazy" />
+              </a>
+            </div>
             <p className="text-center text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} SelfPDF. Open source under MIT License.
             </p>
