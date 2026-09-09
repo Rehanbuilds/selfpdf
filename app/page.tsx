@@ -412,9 +412,6 @@ export default function HomePage() {
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
             <Card className="border-2 border-primary/20 bg-primary/5">
               <CardContent className="flex flex-col items-center gap-6 p-8 text-center md:p-12">
-                <a href="https://www.producthunt.com/products/selfpdf?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-selfpdf" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF on Product Hunt">
-                  <img alt="SelfPDF - The open-source PDF workspace for everyone | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1243600&theme=light&t=1788776484550" />
-                </a>
                 <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
                   Ready to Process Your PDFs?
                 </h2>
