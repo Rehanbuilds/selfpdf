@@ -1,4 +1,4 @@
-import { FileText, Scissors, Minimize2, ImageIcon, FileImage, FileType, RotateCw, Lock, Shield, Droplet, Hash, PenTool, Scan, Type as type, LucideIcon, Presentation, Table, Crop, Code, Wrench, ScanLine, FilePenLine, EyeOff, GitCompare, FileText as TextIcon, Trash2, ListOrdered, Sparkles, Languages } from 'lucide-react';
+import { FileText, Scissors, Minimize2, ImageIcon, FileImage, FileType, RotateCw, Lock, Shield, Droplet, Hash, PenTool, Scan, Type as type, LucideIcon, Presentation, Table, Crop, Code, Wrench, ScanLine, FilePenLine, EyeOff, GitCompare, FileText as TextIcon, Trash2, ListOrdered, Sparkles, Languages, MessageCircle } from 'lucide-react';
 
 export interface PDFTool {
   id: string;
@@ -225,6 +225,9 @@ export const pdfTools: PDFTool[] = [
   },
   {
     id: 'translate-pdf', name: 'Translate PDF', description: 'Translate PDF documents into your preferred language with AI.', icon: Languages, href: '/translate-pdf', category: 'intelligence', color: 'bg-violet-50 text-violet-600 dark:bg-violet-950 dark:text-violet-400', isNew: true,
+  },
+  {
+    id: 'chat-with-pdf', name: 'Chat with PDF', description: 'Ask questions and get grounded answers from your PDF.', icon: MessageCircle, href: '/chat-with-pdf', category: 'intelligence', color: 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400', isNew: true,
   },
   {
     id: 'fill-pdf', name: 'Fill PDF', description: 'Fill PDF forms in your browser', icon: FilePenLine, href: '/tools/fill-pdf', category: 'edit', color: 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400',
