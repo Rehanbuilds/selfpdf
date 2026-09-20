@@ -6,17 +6,23 @@ const toolRoutes = [
   'compress', 'crop', 'excel-to-pdf', 'html-to-pdf', 'images-to-pdf', 'merge', 'ocr',
   'page-numbers', 'pdf-to-excel', 'pdf-to-images', 'pdf-to-powerpoint', 'pdf-to-word',
   'powerpoint-to-pdf', 'protect', 'repair', 'rotate', 'scan', 'sign', 'split', 'unlock',
-  'watermark', 'word-to-pdf', 'pdf-to-markdown', 'summarize-pdf', 'translate-pdf', 'fill-pdf', 'redact-pdf', 'compare-pdf', 'pdf-to-jpg', 'pdf-to-png', 'pdf-to-text', 'delete-pdf-pages', 'reorder-pdf-pages',
+  'watermark', 'word-to-pdf', 'pdf-to-markdown', 'fill-pdf', 'redact-pdf', 'compare-pdf', 'pdf-to-jpg', 'pdf-to-png', 'pdf-to-text', 'delete-pdf-pages', 'reorder-pdf-pages',
 ]
 
 export function GET() {
-  const urls = toolRoutes.map((tool) => `
+  const urls = [...toolRoutes.map((tool) => `
   <url>
     <loc>${siteUrl}/tools/${tool}</loc>
     <lastmod>${lastModified}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>`).join('')
+  </url>`), ...['summarize-pdf', 'translate-pdf', 'chat-with-pdf'].map((tool) => `
+  <url>
+    <loc>${siteUrl}/${tool}</loc>
+    <lastmod>${lastModified}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`)].join('')
 
   return new NextResponse(
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}\n</urlset>`,

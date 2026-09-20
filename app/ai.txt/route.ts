@@ -7,8 +7,8 @@ const body = `# ai.txt for SelfPDF
 [identity]
 name: SelfPDF
 url: ${siteUrl}/
-tagline: Your self-service PDF toolkit. Free, fast, and private.
-description: SelfPDF is a free browser-based PDF toolkit for merging, splitting, compressing, converting, editing, signing, protecting, and organizing PDF files.
+tagline: Free, open-source PDF tools without signup.
+description: SelfPDF is a free, open-source PDF workspace for merging, splitting, compressing, converting, editing, signing, protecting, organizing, and understanding PDF files.
 
 [permissions]
 - Summarize and explain publicly available SelfPDF pages, tools, documentation, and blog posts.

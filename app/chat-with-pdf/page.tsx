@@ -5,10 +5,12 @@ import { Footer } from '@/components/footer';
 import { ChatWithPdf } from '@/components/chat-with-pdf';
 
 export const metadata: Metadata = {
-  title: 'Chat with PDF Online Free',
-  description: 'Ask questions about a PDF and get grounded answers with SelfPDF Chat with PDF. Free, private, and no signup required.',
+  title: 'Chat with PDF Online Free | Ask Questions About a PDF | SelfPDF',
+  description: 'Chat with a PDF online and ask questions about its contents. SelfPDF provides grounded AI answers without signup; document text is sent to the AI service for answering.',
   keywords: ['chat with PDF', 'ask PDF questions', 'AI PDF reader', 'PDF chatbot', 'free PDF AI'],
-  alternates: { canonical: '/chat-with-pdf' },
+  alternates: { canonical: 'https://www.selfpdf.xyz/chat-with-pdf' },
+  openGraph: { title: 'Chat with PDF Online Free | SelfPDF', description: 'Ask questions about a PDF and get grounded AI answers without signup.', url: 'https://www.selfpdf.xyz/chat-with-pdf', type: 'website' },
+  twitter: { card: 'summary', title: 'Chat with PDF Online Free | SelfPDF', description: 'Ask questions about a PDF and get grounded AI answers without signup.' },
 };
 
 export default function ChatWithPdfPage() {

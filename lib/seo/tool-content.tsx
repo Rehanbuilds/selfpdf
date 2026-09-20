@@ -74,8 +74,8 @@ function buildContent(title: string, description: string): ToolSeoContent {
   if (!profile) {
     throw new Error(`Missing SEO profile for tool: ${title}`);
   }
-  const metaTitle = `${profile.keywords[0][0].toUpperCase() + profile.keywords[0].slice(1)} Free | SelfPDF`;
-  return { title, description, metaTitle, metaDescription: `${profile.intro} Try SelfPDF in your browser.`, ...profile, privacy: 'SelfPDF is designed for browser-based document processing without an account. Process only files you are authorized to use, and keep a local backup of important originals.' };
+  const metaTitle = `${profile.keywords[0][0].toUpperCase() + profile.keywords[0].slice(1)} | SelfPDF`;
+  return { title, description, metaTitle, metaDescription: `${profile.intro} Use this free PDF tool in your browser without signup.`, ...profile, privacy: 'SelfPDF’s core PDF file tools are designed for browser-based processing without an account. AI-powered tools may send the text needed for their AI task to an external AI service. Process only files you are authorized to use, and keep a local backup of important originals.' };
 }
 
 export function getToolSeoContent(title: string, description: string) { return buildContent(title, description); }

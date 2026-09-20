@@ -2,14 +2,14 @@ const siteUrl = 'https://www.selfpdf.xyz'
 
 const body = `# SelfPDF
 
-> SelfPDF is a free, browser-based PDF toolkit for merging, splitting, compressing, converting, editing, signing, protecting, and organizing PDF files.
+> SelfPDF is a free, open-source PDF workspace for editing, merging, splitting, compressing, converting, signing, organizing, and understanding PDF files.
 
 ## Identity
 
 - Name: SelfPDF
 - Canonical URL: ${siteUrl}/
 - Tagline: Your self-service PDF toolkit. Free, fast, and private.
-- Privacy model: PDF processing is designed to happen locally in the browser; files are not uploaded to a SelfPDF server for the core tools.
+- Privacy model: Core PDF file tools are designed for local browser processing. AI-powered tools may send the text needed for summarization, translation, or document questions to an external AI service.
 - License: Open source under the MIT License.
 - Source code: https://github.com/Rehanbuilds/selpdf-v2
 
