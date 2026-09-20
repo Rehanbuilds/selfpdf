@@ -12,17 +12,23 @@ const siteUrl = 'https://www.selfpdf.xyz'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
+    default: 'SelfPDF: Free & Open Source PDF Tools | Adobe Acrobat Alternative',
     template: '%s | SelfPDF',
   },
   description:
-    'Use fast, private PDF tools online to merge, compress, split, convert, edit, sign, and protect files in your browser. Free, secure, and no upload required.',
+    'SelfPDF is a free, open-source PDF workspace with tools to edit, merge, split, compress, convert, sign, organize, and understand PDFs. No signup required.',
   applicationName: 'SelfPDF',
   creator: 'SelfPDF',
   publisher: 'SelfPDF',
   category: 'Productivity',
   keywords: [
     'free PDF tools',
+    'open source PDF tools',
+    'free Adobe Acrobat alternative',
+    'open source PDF workspace',
+    'free online PDF editor',
+    'PDF tools without signup',
+    'AI PDF tools',
     'online PDF tools',
     'merge PDF',
     'compress PDF',

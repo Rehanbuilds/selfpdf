@@ -13,14 +13,14 @@ import { HeroBackground } from '@/components/hero-background';
 import { EditorBuildingNotice } from '@/components/editor-building-notice';
 
 export const metadata: Metadata = {
-  title: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
-  description: 'Use fast, private PDF tools online to merge, compress, split, convert, edit, sign, and protect files in your browser. Free, secure, and no upload required.',
+  title: 'SelfPDF: Free & Open Source PDF Tools | Adobe Acrobat Alternative',
+  description: 'SelfPDF is a free, open-source PDF workspace with tools to edit, merge, split, compress, convert, sign, organize, and understand PDFs. No signup required.',
   alternates: { canonical: 'https://www.selfpdf.xyz/' },
   openGraph: {
     type: 'website',
     url: 'https://www.selfpdf.xyz/',
-    title: 'Free PDF Tools Online — Merge, Compress & Convert PDFs | SelfPDF',
-    description: 'Fast, private PDF tools to merge, compress, split, convert, edit, sign, and protect PDF files online.',
+    title: 'SelfPDF: Free & Open Source PDF Tools | Adobe Acrobat Alternative',
+    description: 'Free, open-source PDF tools for editing, merging, splitting, compressing, converting, signing, organizing, and understanding PDFs without signup.',
     images: [{ url: '/selfpdf-social-preview.png', width: 1200, height: 630, alt: 'SelfPDF open source PDF toolkit' }],
   },
   twitter: {
@@ -38,7 +38,7 @@ const faqItems = [
   },
   {
     question: 'Are my PDF files uploaded to SelfPDF?',
-    answer: 'No. SelfPDF processes files locally in your browser, so your PDFs stay on your device instead of being uploaded to a third-party server.',
+    answer: 'Core PDF file tools are designed to process files locally in your browser. AI features such as summarization, translation, and Chat with PDF send the text needed for the requested AI task to an external AI service.',
   },
   {
     question: 'Can I merge PDF files for free?',
@@ -67,7 +67,7 @@ const structuredData = {
       url: 'https://www.selfpdf.xyz',
       applicationCategory: 'ProductivityApplication',
       operatingSystem: 'Any',
-      description: 'Free online PDF tools to merge, split, compress, convert, edit, sign, and organize PDF files.',
+      description: 'Free and open-source PDF tools for editing, merging, splitting, compressing, converting, signing, organizing, and PDF Intelligence workflows.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     },
     {
@@ -110,7 +110,7 @@ export default function HomePage() {
             </h1>
 
             <p className="mx-auto max-w-3xl text-pretty text-base text-muted-foreground sm:text-lg md:text-xl">
-              Process your PDF files directly in your browser with professional-grade tools. No uploads to servers, no tracking. Everything happens locally on your device for maximum privacy and security.
+              Use free, open-source PDF tools in your browser to edit, convert, organize, sign, and protect documents. Core file tools are designed for local processing; AI features send the text needed to answer, summarize, or translate through their AI service.
             </p>
             
             <div className="mt-2 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -176,6 +176,19 @@ export default function HomePage() {
                   <ArrowRight className="ml-2 size-4" />
                 </Link>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b py-14 md:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 rounded-2xl border bg-muted/20 p-6 md:grid-cols-[1fr_auto] md:items-center md:p-10">
+              <div>
+                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">A free, open-source Adobe Acrobat alternative</h2>
+                <p className="mt-3 max-w-3xl leading-7 text-muted-foreground">Looking for a free Adobe Acrobat alternative? SelfPDF provides focused open-source tools for everyday PDF editing, conversion, organization, signing, and protection without requiring a paid subscription or signup. It does not replace every advanced Acrobat workflow, so choose the tool that matches your document.</p>
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium"><Link href="/tools" className="text-primary underline-offset-4 hover:underline">Browse free PDF tools</Link><Link href="/pdf-editor" className="text-primary underline-offset-4 hover:underline">Try the free PDF editor</Link><Link href="/blogs" className="text-primary underline-offset-4 hover:underline">Read PDF guides</Link></div>
+              </div>
+              <Button variant="outline" size="lg" asChild><Link href="/tools">Explore PDF tools<ArrowRight className="ml-2 size-4" /></Link></Button>
             </div>
           </div>
         </section>

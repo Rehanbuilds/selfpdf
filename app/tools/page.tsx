@@ -17,10 +17,10 @@ export default function AllToolsPage() {
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-                All PDF Tools
+                Free PDF Tools Online
               </h1>
               <p className="text-lg text-muted-foreground">
-                Complete collection of professional PDF tools. All free, all fast, all private.
+                Browse free, open-source PDF tools for editing, merging, splitting, compressing, converting, signing, organizing, and understanding PDFs. Core file workflows run in your browser without signup.
               </p>
             </div>
           </div>
