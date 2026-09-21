@@ -128,8 +128,8 @@ Some features depend on browser capabilities and third-party libraries. Always r
 ### Installation
 
 ```bash
-git clone https://github.com/Rehanbuilds/selpdf.git
-cd selpdf
+git clone https://github.com/Rehanbuilds/selfpdf.git
+cd selfpdf
 npm install
 ```
 
