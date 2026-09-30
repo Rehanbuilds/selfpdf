@@ -147,6 +147,9 @@ export function Footer() {
               <a href="https://www.scrolllaunch.com/products/selfpdf?ref=badge" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF featured on ScrollLaunch">
                 <img src="https://www.scrolllaunch.com/api/badge/selfpdf" alt="Featured on ScrollLaunch" width="220" height="48" loading="lazy" />
               </a>
+              <a href="https://startupfa.me/s/selfpdf?utm_source=selfpdf.xyz" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF featured on Startup Fame">
+                <img src="https://startupfa.me/badges/featured-badge.webp" alt="SelfPDF - Featured on Startup Fame" width="171" height="54" loading="lazy" />
+              </a>
             </div>
             <p className="text-center text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} SelfPDF. Open source under MIT License.
