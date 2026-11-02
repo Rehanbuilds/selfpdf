@@ -150,6 +150,9 @@ export function Footer() {
               <a href="https://startupfa.me/s/selfpdf?utm_source=selfpdf.xyz" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF featured on Startup Fame">
                 <img src="https://startupfa.me/badges/featured-badge.webp" alt="SelfPDF - Featured on Startup Fame" width="171" height="54" loading="lazy" />
               </a>
+              <a href="https://www.oribisoft.com/products/selfpdf-6ae87d06" target="_blank" rel="noopener noreferrer" aria-label="SelfPDF featured on Oribisoft">
+                <img src="https://www.oribisoft.com/api/badges/f1efe149-f1f7-4a4f-b50d-2c3ce5521a02?type=featured&amp;theme=light&amp;size=compact" alt="Featured on Oribisoft" width="280" height="105" loading="lazy" />
+              </a>
             </div>
             <p className="text-center text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} SelfPDF. Open source under MIT License.
